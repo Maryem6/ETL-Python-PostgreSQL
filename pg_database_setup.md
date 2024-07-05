@@ -156,7 +156,6 @@ CREATE TABLE reference_ing(
    id_recipe INT,
    id_ingredient INT,
    measure VARCHAR(50),
-   PRIMARY KEY(id_recipe, id_ingredient),
    FOREIGN KEY(id_recipe) REFERENCES Recipe(id_recipe),
    FOREIGN KEY(id_ingredient) REFERENCES Ingredient(id_ingredient)
 );
@@ -167,7 +166,6 @@ CREATE TABLE reference_equip(
    id_recipe INT,
    id_step INT,
    id_equipment INT,
-   PRIMARY KEY(id_recipe, id_step, id_equipment),
    FOREIGN KEY(id_recipe) REFERENCES Recipe(id_recipe),
    FOREIGN KEY(id_step) REFERENCES Step(id_step),
    FOREIGN KEY(id_equipment) REFERENCES Equipment(id_equipment)
@@ -178,7 +176,6 @@ CREATE TABLE reference_equip(
 CREATE TABLE is_a(
    id_recipe INT,
    id_dish_type INT,
-   PRIMARY KEY(id_recipe, id_dish_type),
    FOREIGN KEY(id_recipe) REFERENCES Recipe(id_recipe),
    FOREIGN KEY(id_dish_type) REFERENCES dish(id_dish_type)
 );
@@ -188,7 +185,6 @@ CREATE TABLE is_a(
 CREATE TABLE belongs(
    id_recipe INT,
    id_cuisine INT,
-   PRIMARY KEY(id_recipe, id_cuisine),
    FOREIGN KEY(id_recipe) REFERENCES Recipe(id_recipe),
    FOREIGN KEY(id_cuisine) REFERENCES Cuisine(id_cuisine)
 );
