@@ -195,6 +195,18 @@ CREATE TABLE belongs(
 ```sql
 CREATE USER maryem WITH PASSWORD 'your_password';
 GRANT ALL PRIVILEGES ON DATABASE your_db_name TO your_username;
+
+GRANT ALL PRIVILEGES ON TABLE public.belongs TO your_username;
+GRANT ALL PRIVILEGES ON TABLE public.cuisine TO your_username;
+GRANT ALL PRIVILEGES ON TABLE public.dish TO your_username;
+GRANT ALL PRIVILEGES ON TABLE public.equipment TO your_username;
+GRANT ALL PRIVILEGES ON TABLE public.ingredient TO your_username;
+GRANT ALL PRIVILEGES ON TABLE public.instruction TO your_username;
+GRANT ALL PRIVILEGES ON TABLE public.is_a TO your_username;
+GRANT ALL PRIVILEGES ON TABLE public.recipe TO your_username;
+GRANT ALL PRIVILEGES ON TABLE public.reference_equip TO your_username;
+GRANT ALL PRIVILEGES ON TABLE public.reference_ing TO your_username;
+GRANT ALL PRIVILEGES ON TABLE public.step TO your_username;
 ```
 
 8. Update Python Script with Connection Details
