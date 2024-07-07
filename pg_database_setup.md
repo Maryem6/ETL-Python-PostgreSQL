@@ -106,7 +106,7 @@ CREATE TABLE Ingredient(
    ing_name VARCHAR(50) NOT NULL,
    consistency VARCHAR(20),
    aisle VARCHAR(20),
-   PRIMARY KEY(id_ingredient),
+   PRIMARY KEY(id_ingredient)
 );
 ```
 
