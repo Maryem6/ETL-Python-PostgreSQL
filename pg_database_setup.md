@@ -70,9 +70,9 @@ CREATE DATABASE recipe_etl;
 ```sql
 CREATE TABLE Recipe (
    id_recipe INT,
-   recipe_title VARCHAR(50) NOT NULL,
+   recipe_title VARCHAR(100) NOT NULL,
    ready_min INT,
-   summary VARCHAR(2000),
+   summary VARCHAR(5000),
    servings INT,
    is_cheap BOOLEAN,
    price_per_serving DOUBLE PRECISION,
@@ -84,8 +84,8 @@ CREATE TABLE Recipe (
    is_sustainable BOOLEAN,
    is_lowFodmap BOOLEAN,
    is_Popular BOOLEAN,
-   license VARCHAR(20),
-   source_url VARCHAR(100),
+   license VARCHAR(100),
+   source_url VARCHAR(500),
    PRIMARY KEY(id_recipe),
    UNIQUE(recipe_title)
 );
@@ -103,9 +103,9 @@ CREATE TABLE Instruction(
 ```sql
 CREATE TABLE Ingredient(
    id_ingredient INT,
-   ing_name VARCHAR(50) NOT NULL,
-   consistency VARCHAR(20),
-   aisle VARCHAR(20),
+   ing_name VARCHAR(100) NOT NULL,
+   consistency VARCHAR(100),
+   aisle VARCHAR(100),
    PRIMARY KEY(id_ingredient)
 );
 ```
@@ -113,7 +113,7 @@ CREATE TABLE Ingredient(
 ```sql
 CREATE TABLE Step(
    id_step INT,
-   step VARCHAR(8000) NOT NULL,
+   step VARCHAR(10000) NOT NULL,
    number INT,
    length VARCHAR(50),
    id_instruction INT NOT NULL,
@@ -125,7 +125,7 @@ CREATE TABLE Step(
 ```sql
 CREATE TABLE Equipment(
    id_equipment INT,
-   equip_name VARCHAR(50) NOT NULL,
+   equip_name VARCHAR(500) NOT NULL,
    PRIMARY KEY(id_equipment),
    UNIQUE(equip_name)
 );
@@ -134,7 +134,7 @@ CREATE TABLE Equipment(
 ```sql
 CREATE TABLE dish(
    id_dish_type INT,
-   dish_type VARCHAR(50) NOT NULL,
+   dish_type VARCHAR(500) NOT NULL,
    PRIMARY KEY(id_dish_type),
    UNIQUE(dish_type)
 );
@@ -143,7 +143,7 @@ CREATE TABLE dish(
 ```sql
 CREATE TABLE Cuisine(
    id_cuisine INT,
-   recipe_cuisine VARCHAR(50) NOT NULL,
+   recipe_cuisine VARCHAR(500) NOT NULL,
    PRIMARY KEY(id_cuisine),
    UNIQUE(recipe_cuisine)
 );
