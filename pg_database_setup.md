@@ -69,7 +69,7 @@ CREATE DATABASE recipe_etl;
 5. Create tables according to the logical model
 ```sql
 CREATE TABLE Recipe (
-   id_recipe SERIAL,
+   id_recipe INT,
    recipe_title VARCHAR(50) NOT NULL,
    ready_min INT,
    summary VARCHAR(2000),
@@ -93,7 +93,7 @@ CREATE TABLE Recipe (
 
 ```sql
 CREATE TABLE Instruction(
-   id_instruction SERIAL,
+   id_instruction INT,
    id_recipe INT NOT NULL,
    PRIMARY KEY(id_instruction),
    FOREIGN KEY(id_recipe) REFERENCES Recipe(id_recipe)
@@ -102,31 +102,29 @@ CREATE TABLE Instruction(
 
 ```sql
 CREATE TABLE Ingredient(
-   id_ingredient SERIAL,
+   id_ingredient INT,
    ing_name VARCHAR(50) NOT NULL,
    consistency VARCHAR(20),
    aisle VARCHAR(20),
    PRIMARY KEY(id_ingredient),
-   UNIQUE(ing_name)
 );
 ```
 
 ```sql
 CREATE TABLE Step(
-   id_step SERIAL,
+   id_step INT,
    step VARCHAR(8000) NOT NULL,
    number INT,
    length VARCHAR(50),
    id_instruction INT NOT NULL,
    PRIMARY KEY(id_step),
-   UNIQUE(step),
    FOREIGN KEY(id_instruction) REFERENCES Instruction(id_instruction)
 );
 ```
 
 ```sql
 CREATE TABLE Equipment(
-   id_equipment SERIAL,
+   id_equipment INT,
    equip_name VARCHAR(50) NOT NULL,
    PRIMARY KEY(id_equipment),
    UNIQUE(equip_name)
@@ -135,7 +133,7 @@ CREATE TABLE Equipment(
 
 ```sql
 CREATE TABLE dish(
-   id_dish_type SERIAL,
+   id_dish_type INT,
    dish_type VARCHAR(50) NOT NULL,
    PRIMARY KEY(id_dish_type),
    UNIQUE(dish_type)
@@ -144,7 +142,7 @@ CREATE TABLE dish(
 
 ```sql
 CREATE TABLE Cuisine(
-   id_cuisine SERIAL,
+   id_cuisine INT,
    recipe_cuisine VARCHAR(50) NOT NULL,
    PRIMARY KEY(id_cuisine),
    UNIQUE(recipe_cuisine)
