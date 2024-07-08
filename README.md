@@ -45,4 +45,10 @@ belongs = (<ins>#id_recipe</ins>, <ins>#id_cuisine</ins>);
 
 ## Challenges
 
-There are some inconsistencies regarding ingredient names that I was unable to resolve. I tried using some Python libraries to address the issue. For example, I transformed 'tomato' and 'tomatoes' to 'tomatoes,' but there are exceptions like 'ice' becoming 'rice.' If you have any suggestions, please feel free to share them with me to improve my project.
+1. There are some inconsistencies regarding ingredient names that I was unable to resolve. I tried using some Python libraries to address the issue. For example, I transformed 'tomato' and 'tomatoes' to 'tomatoes,' but there are exceptions like 'ice' becoming 'rice.'
+2. The loading function presents several errors when trying to update it to be able to append the database's data
+
+
+  
+**If you have any suggestions, please feel free to share them with me to improve my project.
+**
