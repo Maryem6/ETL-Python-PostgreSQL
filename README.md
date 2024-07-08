@@ -50,5 +50,4 @@ belongs = (<ins>#id_recipe</ins>, <ins>#id_cuisine</ins>);
 
 
   
-**If you have any suggestions, please feel free to share them with me to improve my project.
-**
+**If you have any suggestions, please feel free to share them with me to improve my project.**
