@@ -48,6 +48,12 @@ belongs = (<ins>#id_recipe</ins>, <ins>#id_cuisine</ins>);
 1. There are some inconsistencies regarding ingredient names that I was unable to resolve. I tried using some Python libraries to address the issue. For example, I transformed 'tomato' and 'tomatoes' to 'tomatoes,' but there are exceptions like 'ice' becoming 'rice.'
 2. The loading function presents several errors when trying to update it to be able to append the database's data
 
-
   
 **If you have any suggestions, please feel free to share them with me to improve my project.**
+
+## Versions:
+ This project has 3 versions:
+ 1. The code where I developed the structure of the project
+ 2. The enhanced and cleaned code for one execution
+ 3. The code where I introduced the shell scripting
+    - Here, the pipeline is executed every week using cron so the load function in the python code should be updated to be able to append the database's data : This is where the challenge came in!
