@@ -243,3 +243,26 @@ DB_PASSWORD = 'your_password'
 > ```
 
 ------------------
+
+> [!tip]
+> If you want to delete all the data in your tables, use the following SQL syntax:
+> ```SQL
+> -- Start by deleting rows from the tables that have no dependencies on other tables
+>
+> -- Step 1: Delete from child tables
+> DELETE FROM reference_equip;
+> DELETE FROM reference_ing;
+> DELETE FROM step;
+>
+> -- Step 2: Delete from parent tables
+> DELETE FROM instruction;
+> DELETE FROM belongs;
+> DELETE FROM is_a;
+> DELETE FROM cuisine;
+> DELETE FROM dish;
+> DELETE FROM equipment;
+> DELETE FROM ingredient;
+> DELETE FROM recipe;
+> ```
+
+---------------------
