@@ -52,6 +52,8 @@ belongs = (<ins>#id_recipe</ins>, <ins>#id_cuisine</ins>);
  4. **Version 4:** The code where I handled redundant data in the extract and transform functions and included shell scripting.
     - In this version, the pipeline is scheduled to run on the first day of each month at 7 AM using cron.
    
+ **Note:** Navigate through the branches to view the different versions.
+   
 ## Challenges
 
 1. There are some inconsistencies regarding ingredient names that I was unable to resolve. I tried using some Python libraries to address the issue. For example, I transformed 'tomato' and 'tomatoes' to 'tomatoes,' but there are exceptions like 'ice' becoming 'rice.'
