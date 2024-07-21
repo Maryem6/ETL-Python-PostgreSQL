@@ -33,16 +33,32 @@ The base URL for the Spoonacular API is https://api.spoonacular.com . Depending 
 You can retrieve the needed endpoint from the api documentation: 
 https://spoonacular.com/food-api/docs#Search-Recipes-Complex
 
-In my project, I extracted random recipes using the `/recipes/random` endpoint
+In this version, I used the `/recipes/complexSearch` endpoint as it presents less redundant data than the `/recipes/random` endpoint.
 
-You need to include your API key as a query parameter. Here’s how to construct the URL in Python:
 
 ```python
-API_URL = 'https://api.spoonacular.com/recipes/random?apiKey=' + API_KEY
+API_URL = 'https://api.spoonacular.com/recipes/complexSearch'
 
 ```
 
-There are several other endpoints and parameters you can use which are cited in the documentation 
+**Note:** There are several other endpoints and parameters you can use which are cited in the documentation 
+
+You need to include your API key and API url as a query parameters. Here’s how to do this in Python:
+
+```python
+params = {
+        'apiKey': API_KEY, 
+        'number': number,  # The number of records to fetch in one request.
+        'offset': offset,   # The number of records to skip (used for pagination).
+        'addRecipeInformation': True,
+        'instructionsRequired': True,
+        'fillIngredients': True,
+        'addRecipeInstructions': True,
+        'addRecipeNutrition': True
+    }
+response = requests.get(API_URL, params=params)
+
+```
 
 ## Monitoring API Usage
 
@@ -54,21 +70,11 @@ To monitor your API usage, you can use the API Console provided by Spoonacular. 
 
 By keeping track of these metrics, you can manage your usage effectively and avoid exceeding your daily limits.
 
-![image](https://github.com/Maryem6/ETL-Python-PostgreSQL/assets/96294018/623d4f61-550c-4272-a1f7-f7e151dbb6da)
+![image](https://github.com/user-attachments/assets/cf8b0a9b-d51c-4707-a6fb-292e18e5b480)
+
 
 
 ## Conclusion
 
 The Spoonacular API is a powerful tool for accessing a wide range of food-related data. By understanding how to construct requests, use new parameters, and monitor your usage, you can make the most of the API in your applications.
-
-
-
-
-
-
-
-
-
-
-
 
