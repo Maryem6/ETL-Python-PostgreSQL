@@ -2,7 +2,9 @@
 
 ## Overview
 
-I noticed that while extracting the second batch of data, the loading function presents several errors due to its inability to handle redundant data across batches. In this version, I tried to ensure that each record is inserted only once at its initial occurrence and skipped in subsequent batches, as well as properly manage the foreign key relationships in other tables.
+In this version, I aimed to schedule my pipeline to run on a monthly basis, so the load function in the Python code needed to be updated to append data to the database. This presented a challenge!
+
+I noticed that while extracting the second batch of data, the loading function encountered several errors due to its inability to handle redundant data across batches. To address this, I ensured that each record is inserted only once at its initial occurrence and skipped in subsequent batches. Additionally, I properly managed the foreign key relationships in other tables.
 
 ## Challenges
 
