@@ -43,6 +43,17 @@ Cuisine = (<ins>id_cuisine</ins> INT, recipe_cuisine VARCHAR(50));
 
 belongs = (<ins>#id_recipe</ins>, <ins>#id_cuisine</ins>);
 
+## Content
+
+- **`ETLpythonproject.ipynb:`** The final Python code in Jupyter Notebook. (You should follow the `etl-script.sh` manually, otherwise the Python code won't work.)
+- **`Extract.py:`** The Extract part of the ETL process.
+- **`How-to-deal-with-the-API.md:`** An overview of the API and instructions on how to use it.
+- **`Transform&Load.py:`**  The Transform and Load parts of the ETL process.
+- **`logger_config.py:`** The logging configuration for the pipeline. This will be used as a module in the `Extract.py` and `Transform&Load.py` files.
+- **`Python-Logging-Module.md:`** An explanation of logging in Python for beginners.
+- **`etl-script.sh:`** The bash script that executes the Python files of the pipeline, namely `Extract.py` and `Transform&Load.py`.
+- **`pg_database_setup.md:`** Contains the PostgreSQL configuration and SQL syntax used.
+- **`pipeline_scheduling.md:`** Explains how the pipeline is scheduled.
 
 ## Versions:
  This project has 4 versions:
